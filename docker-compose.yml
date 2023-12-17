@@ -1,0 +1,30 @@
+version: '3'
+
+services:
+  backend-laravel:
+    build:
+      context: ./backend-laravel
+      dockerfile: Dockerfile.dev
+    ports:
+      - "8000:8000"
+    depends_on:
+      - database
+    environment:
+      - APP_ENV=local
+
+  frontend-nextjs:
+    build:
+      context: ./frontend-nextjs
+      dockerfile: Dockerfile.dev
+    ports:
+      - "3000:3000"
+    environment:
+      - NODE_ENV=development
+
+  database:
+    image: mysql:5.7
+    environment:
+      MYSQL_DATABASE: hackfest_db
+      MYSQL_USER: admin
+      MYSQL_PASSWORD: admin_hackfest
+      MYSQL_ROOT_PASSWORD: root_hackfest
