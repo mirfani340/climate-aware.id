@@ -1,7 +1,9 @@
-version: '3'
+version: '3.8'
 
 services:
   backend-laravel:
+    container_name: backend
+    # image: backend-laravel
     build:
       context: ./backend-laravel
       dockerfile: Dockerfile.dev
@@ -13,6 +15,8 @@ services:
       - APP_ENV=local
 
   frontend-nextjs:
+    container_name: frontend
+    # image: frontend-nextjs
     build:
       context: ./frontend-nextjs
       dockerfile: Dockerfile.dev
@@ -23,6 +27,7 @@ services:
 
   database:
     image: mysql:5.7
+    container_name: mysql-hackfest
     environment:
       MYSQL_DATABASE: hackfest_db
       MYSQL_USER: admin
