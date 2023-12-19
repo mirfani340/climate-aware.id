@@ -1,7 +1,7 @@
 # Project Description
 This project, named "hackfest-gdsc-kopet-team", is focused on climate change education. It utilizes Next.js as the frontend framework, Laravel as the backend framework, and MySQL as the database. To facilitate quick setup, the project includes Docker Compose and a Dockerfile. These tools allow for easy containerization and deployment of the application.
 
-# Quickstart
+# Quickstart (using docker)
 
 To run the project using Docker Compose, follow these steps:
 
@@ -34,3 +34,56 @@ To run the project using Docker Compose, follow these steps:
     This command will stop and remove the containers.
 
 That's it! You have successfully run the project using Docker Compose. Enjoy exploring the climate change education application!
+
+ # Manual Install
+
+ ## Clone the repo 
+
+```bash
+git clone https://github.com/mirfani340/hackfest-gdsc-kopet-team
+```
+
+## Install Laravel Dependency (Backend)
+```bash
+composer install
+```
+## Generate Key
+```bash
+php artisan key:generate
+```
+
+## Make .env
+### For Unix System / Linux
+```bash
+cp .env.example .env 
+```
+
+### For Windows
+Just make a copy of **.env.example** to **.env** 
+
+## Ready
+```bash
+php artisan serve 
+```
+
+## Install Next.js Dependency (Frontend)
+### Install Depedency Using Yarn
+```bash
+yarn install
+```
+
+### Install Depedency Using NPM
+```bash
+npm install
+```
+
+## Running the dev server
+### Using Yarn
+```bash
+yarn run dev
+```
+
+### Using NPM
+```bash
+npm run dev
+```
