@@ -1,5 +1,0 @@
-name: discuss-flarum
-recipe: lamp
-config:
-  webroot: .
-  php: "8.2"
