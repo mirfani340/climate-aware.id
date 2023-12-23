@@ -1,0 +1,83 @@
+# Laravel specific
+.env
+.env.*
+vendor/
+node_modules/
+npm-debug.log
+yarn-error.log
+
+# IDE/Editor specific
+.idea/
+.vscode/
+*.sublime-project
+*.sublime-workspace
+*.komodoproject
+.komodotools/
+.kateproject
+.kateconfig
+*.kate-swp
+*.kate-swp.*
+*~.nib
+*.swp
+*~
+.project
+.buildpath
+.cproject
+.settings/
+.classpath
+.phpstorm.meta.php
+.phpstorm.meta.php.skeleton
+.phpstorm.meta.strings.xml
+*.iml
+*.ipr
+*.iws
+.idea_modules/
+.idea/
+*.code-workspace
+
+# OS generated files
+.DS_Store
+Thumbs.db
+ehthumbs.db
+Icon?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs_vista.db
+ehthumbs_win.db
+$RECYCLE.BIN/
+*.stackdump
+
+# Laravel Mix
+/public/mix-manifest.json
+/public/hot
+
+# Laravel Passport
+/storage/oauth-private.key
+/storage/oauth-public.key
+
+# Laravel Telescope
+/storage/app/telescope/*.json
+/storage/app/telescope/*.log
+/storage/logs/telescope/*.log
+
+# Laravel Horizon
+/storage/app/horizon/*.png
+/storage/app/horizon/*.log
+
+# Laravel Dusk
+/storage/app/screenshots
+/storage/app/chromedriver
+
+# PHPUnit
+/phpunit.xml
+/tests/
+
+# Composer
+/vendor/
+
+# Homestead
+/.homestead
+
+# Valet
+/.valet
