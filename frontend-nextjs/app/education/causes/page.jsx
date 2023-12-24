@@ -18,16 +18,16 @@ const page = () => {
   return (
     <MainLayout>
       <section className="text-white relative">
-        <Image src={causes} alt="about1" className="h-420px object-cover" />
+        <Image src={causes} alt="causes" className="h-420px w-full object-cover" />
         <div
           className="absolute text-center w-full h-full flex flex-col justify-center"
           id="textOverlay"
         >
-          <h2 className="font-bold text-base py-1">CAUSES</h2>
-          <p className="font-bold text-xl">
+          <h2 className="font-bold text-2xl py-1">CAUSES</h2>
+          <p className="font-bold text-4xl">
             Why is Climate Change <br /> Happening?
           </p>
-          <p className="text-xs py-1">
+          <p className="text-base md:text-xl py-1">
             Perubahan iklim tentu tidak datang tanpa sebab <br /> melainkan
             akibat dari suatu kejadian.
           </p>
@@ -71,7 +71,7 @@ const page = () => {
             </ul>
           </div>
         </div>
-        <div className="text-sm max-w-screen-sm m-auto">
+        <div className="max-w-screen-sm m-auto text-lg">
           <p className="my-2">
             Perubahan iklim disebabkan oleh berbagai faktor, baik alami maupun
             buatan manusia. Namun, saat ini, banyak bukti menunjukkan bahwa
@@ -89,7 +89,7 @@ const page = () => {
                 alt="green house effect"
                 className="w-300px"
               />
-              <span style={{ fontSize: "10px" }}>Foto: NASA/JPL-Caltech</span>
+              <span style={{ fontSize: "12px" }}>Foto: NASA/JPL-Caltech</span>
             </div>
             <p className="pb-2">
               Peningkatan emisi gas rumah kaca adalah penyebab utama perubahan
@@ -132,7 +132,7 @@ const page = () => {
             <h2 className="font-bold my-2">2. Pembakaran Bahan Bakar Fosil</h2>
             <div className="px-4 py-2 text-center flex flex-col items-center gap-2">
               <Image src={fosil} alt="fosil" className="px-4" />
-              <span style={{ fontSize: "10px" }}>Foto: DW (News)</span>
+              <span style={{ fontSize: "12px" }}>Foto: DW (News)</span>
             </div>
             <p className="pb-2">
               Pembakaran bahan bakar fosil adalah proses di mana bahan bakar
@@ -168,8 +168,8 @@ const page = () => {
                 alt="sea level"
                 style={{ height: "200px", objectFit: "cover" }}
               />
-              <span style={{ fontSize: "10px" }}>Foto: Kompas</span>
-              <span style={{ fontSize: "8px" }}>
+              <span style={{ fontSize: "12px" }}>Foto: Kompas</span>
+              <span style={{ fontSize: "10px" }}>
                 GAMBAR SATELIT LAPISAN ES DI PULAU EAGLE ANTARTIKA SEPANJANG
                 FEBRUARI 2020. JOSHUA STEVENS/LANDSAT/USGS
               </span>
@@ -211,7 +211,7 @@ const page = () => {
             </h2>
             <div className="px-4 py-2 text-center flex flex-col items-center gap-2">
               <Image src={hutan} alt="hutan" className="object-cover" />
-              <span style={{ fontSize: "10px" }}>
+              <span style={{ fontSize: "12px" }}>
                 Pembersihan ladang di Danau Sentarum, Kalimantan Barat. Saat ini
                 akibat tekanan sosial ekonomi terjadi perubahan pola penggunaan
                 lahan tradisional. Tim Cronin/CIFOR

@@ -12,11 +12,11 @@ const Header = () => {
     document.getElementById("overlay").classList.remove("block");
   };
   return (
-    <header className="sticky top-0 z-5 min-h-40px bg-black flex justify-between text-neutral-content p-2 md:p-0 md:px-2" style={{fontSize: "10px"}}>
-      <a className="btn btn-ghost">daisyUI</a>
-      <ul className="hidden md:flex font-semibold p-1 w-full justify-end gap-3 items-center basis-3/4">
+    <header className="navbar sticky top-0 z-5 min-h-40px bg-black flex justify-between text-neutral-content p-2 md:p-0 md:px-2">
+      <a className="btn btn-ghost text-xl" href="/">Climate Aware</a>
+      <ul className="hidden md:flex font-semibold p-4 w-full justify-end gap-3 items-center basis-3/4">
         <a href="/">HOME</a>
-        <a href="#section2">ABOUT US</a>
+        <a href="/about">ABOUT US</a>
         <a href="#section3">NEWS</a>
         <a href="#section4">EDUCATIONS</a>
         <a href="#section5">MORE</a>
