@@ -18,16 +18,16 @@ const page = () => {
   return (
     <MainLayout>
       <section className="text-white relative">
-        <Image src={solutions} alt="about1" className="h-420px object-cover" />
+        <Image src={solutions} alt="solutions" className="h-420px w-full object-cover" />
         <div
           className="absolute text-center w-full h-full flex flex-col justify-center"
           id="textOverlay"
         >
-          <h2 className="font-bold text-base py-1">SOLUTIONS</h2>
-          <p className="font-bold text-xl">
+          <h2 className="font-bold text-2xl py-1">SOLUTIONS</h2>
+          <p className="font-bold text-4xl">
             What is Being Done to <br /> Solve Climate Change?
           </p>
-          <p className="text-xs py-1">
+          <p className="text-base md:text-xl py-1">
             Diperlukan langkah yang tepat untuk menanggulangi dan menangani{" "}
             <br /> dampak dari perubahan iklim
           </p>
@@ -71,7 +71,7 @@ const page = () => {
             </ul>
           </div>
         </div>
-        <div className="text-sm max-w-screen-sm m-auto">
+        <div className="max-w-screen-sm m-auto text-lg">
           <p className="my-2">
             Menanggulangi perubahan iklim memerlukan upaya bersama dari seluruh
             masyarakat, pemerintah, bisnis, dan organisasi di seluruh dunia.
@@ -84,7 +84,7 @@ const page = () => {
             <h2 className="font-bold mb-2">1. Pergeseran ke Energi Bersih</h2>
             <div className="px-4 py-2 text-center flex flex-col gap-2">
               <Image src={energibersih} alt="energi bersih" />
-              <span style={{ fontSize: "10px" }}>Foto: climate.nasa.gov</span>
+              <span style={{ fontSize: "12px" }}>Foto: climate.nasa.gov</span>
             </div>
             <p className="pb-2">
               Energi bersih adalah istilah yang merujuk pada sumber energi dan
@@ -173,7 +173,7 @@ const page = () => {
             <h2 className="font-bold my-2">2. Perubahan Pola Cuaca</h2>
             <div className="px-4 py-2 text-center flex flex-col items-center gap-2">
               <Image src={cuaca} alt="hutan" className="object-cover" />
-              <span style={{ fontSize: "10px" }}>Sumber: js.UGM.ac.id</span>
+              <span style={{ fontSize: "12px" }}>Sumber: js.UGM.ac.id</span>
             </div>
             <p className="pb-2">
               Perubahan dalam pola cuaca, termasuk peningkatan kejadian cuaca
@@ -199,8 +199,8 @@ const page = () => {
             <div className="grid grid-cols-2 gap-2 px-4 py-2 text-center">
               <Image src={gajah} alt="gajah" />
               <Image src={terumbu} alt="terumbu" />
-              <span style={{ fontSize: "10px" }}>Foto: Mongabay</span>
-              <span style={{ fontSize: "10px" }}>
+              <span style={{ fontSize: "12px" }}>Foto: Mongabay</span>
+              <span style={{ fontSize: "12px" }}>
                 Kerusakan terumbu Karang di Indonesia Dampak Perubahan Iklim,
                 Mongabay.co.id
               </span>

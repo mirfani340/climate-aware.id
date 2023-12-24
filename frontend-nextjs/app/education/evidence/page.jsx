@@ -18,16 +18,16 @@ const page = () => {
   return (
     <MainLayout>
       <section className="text-white relative">
-        <Image src={evidence} alt="about1" className="h-420px object-cover" />
+        <Image src={evidence} alt="evidence" className="h-420px w-full object-cover" />
         <div
           className="absolute text-center w-full h-full flex flex-col justify-center"
           id="textOverlay"
         >
-          <h2 className="font-bold text-base py-1">EVIDENCE</h2>
-          <p className="font-bold text-xl">
+          <h2 className="font-bold text-2xl py-1">EVIDENCE</h2>
+          <p className="font-bold text-4xl">
             How Do We Know <br /> Climate Change Is Real?
           </p>
-          <p className="text-xs py-1">
+          <p className="text-base md:text-xl py-1">
             Bukti perubahan iklim terjadi dapat dilihat <br /> dari berbagai
             data dan fenomena di seluruh dunia.
           </p>
@@ -85,15 +85,15 @@ const page = () => {
             </li>
           </ul>
         </aside>
-        <div className="text-sm max-w-screen-sm m-auto">
-          <h1 className="font-semibold my-2">
+        <div className="max-w-screen-sm m-auto text-lg">
+          <h1 className="my-2">
             Berikut adalah beberapa bukti yang mendukung perubahan iklim:
           </h1>
           <div>
             <h2 className="font-bold mb-2">1. Peningkatan Suhu Global</h2>
             <div className="px-4 py-2 text-center flex flex-col gap-2">
               <Image src={globalTemp} alt="global temp" />
-              <span style={{ fontSize: "10px" }}>Sumber: WMO, 2019</span>
+              <span style={{ fontSize: "12px" }}>Sumber: WMO, 2019</span>
             </div>
             <p className="pb-2">
               Rekaman suhu global menunjukkan peningkatan yang signifikan selama
@@ -145,7 +145,7 @@ const page = () => {
             <h2 className="font-bold my-2">3. Kenaikan Permukaan Air Laut</h2>
             <div className="px-4 py-2 flex flex-col items-center gap-2">
               <Image src={sealevel} alt="sea level" />
-              <span style={{ fontSize: "10px" }}>Sumber: Kumparan</span>
+              <span style={{ fontSize: "12px" }}>Sumber: Kumparan</span>
             </div>
             <p className="pb-2">
               Kenaikan suhu menyebabkan pelelehan gletser dan es di kutub, yang
@@ -169,7 +169,7 @@ const page = () => {
             <h2 className="font-bold my-2">4. Perubahan Pola Cuaca</h2>
             <div className="px-4 py-2 text-center flex flex-col items-center gap-2">
               <Image src={cuaca} alt="hutan" className="object-cover" />
-              <span style={{ fontSize: "10px" }}>Sumber: js.UGM.ac.id</span>
+              <span style={{ fontSize: "12px" }}>Sumber: js.UGM.ac.id</span>
             </div>
             <p className="pb-2">
               Perubahan dalam pola cuaca, termasuk peningkatan kejadian cuaca
@@ -192,7 +192,7 @@ const page = () => {
             <h2 className="font-bold my-2">5. Perubahan Hutan dan Ekosistem</h2>
             <div className="px-4 py-2 text-center flex flex-col items-center gap-2">
               <Image src={hutan1} alt="hutan" className="object-cover" />
-              <span style={{ fontSize: "10px" }}>Sumber: Tim Cronin CIFOR, 2016</span>
+              <span style={{ fontSize: "12px" }}>Sumber: Tim Cronin CIFOR, 2016</span>
             </div>
             <p className="pb-2">
               Perubahan iklim dapat mempengaruhi distribusi geografis hewan dan
