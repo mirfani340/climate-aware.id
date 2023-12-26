@@ -6,8 +6,6 @@ import Image from "next/image";
 import CardsList from "@/components/CardsList";
 
 import axios from "axios";
-import { API_KEY } from "../api/constant";
-import { API_URL } from "../api/constant";
 
 import img1 from "../public/images/img1.jpg";
 import evidence from "../public/images/evidence.jpg";
@@ -29,6 +27,8 @@ export default function App() {
   const [news, setNews] = useState([]);
   const dotenv = require("dotenv");
   dotenv.config();
+  const API_KEY = process.env.NEXT_PUBLIC_API_KEY || "";
+  const API_URL = process.env.NEXT_PUBLIC_BASE_URL || "";
   const NEWS_API = `${API_URL}${API_KEY}`;
 
   const [currentPage, setCurrentPage] = useState(1);
