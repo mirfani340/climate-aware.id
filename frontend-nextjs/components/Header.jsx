@@ -19,7 +19,7 @@ const Header = () => {
         <a href="/about">ABOUT US</a>
         <a href="#section3">NEWS</a>
         <a href="#section4">EDUCATIONS</a>
-        <a href="#section5">MORE</a>
+        <a href="https://forum.muhammadirfani.dev">FORUM</a>
       </ul>
 
       <div className="flex bg-slate-500 rounded-md md:hidden items-center p-4">
@@ -57,7 +57,7 @@ const Header = () => {
           <div className="w-full h-2px bg-white"></div>
           <a href="#section4" className="py-2" onClick={closeOverlay}>EDUCATIONS</a>
           <div className="w-full h-2px bg-white"></div>
-          <a href="#section5" className="py-2" onClick={closeOverlay}>MORE</a>
+          <a href="https://forum.muhammadirfani.dev" className="py-2" onClick={closeOverlay}>FORUM</a>
         </ul>
       </div>
     </header>

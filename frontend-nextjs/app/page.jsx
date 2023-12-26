@@ -6,6 +6,8 @@ import Image from "next/image";
 import CardsList from "@/components/CardsList";
 
 import axios from "axios";
+import { API_KEY } from "../api/constant";
+import { API_URL } from "../api/constant";
 
 import img1 from "../public/images/img1.jpg";
 import evidence from "../public/images/evidence.jpg";
@@ -25,6 +27,9 @@ import "aos/dist/aos.css";
 
 export default function App() {
   const [news, setNews] = useState([]);
+  const dotenv = require("dotenv");
+  dotenv.config();
+  const NEWS_API = `${API_URL}${API_KEY}`;
 
   const [currentPage, setCurrentPage] = useState(1);
   const rowsPerPage = 3;
@@ -58,9 +63,7 @@ export default function App() {
   }, []);
 
   const getNews = async () => {
-    const response = await axios.get(
-      "https://newsapi.org/v2/everything?q=climatechange&apiKey=1a8bf8b62f9c4b81ac5712b3b87d937c"
-    );
+    const response = await axios.get(`${NEWS_API}`);
     const responseJson = await response.data.articles;
     setNews(responseJson);
   };
@@ -323,7 +326,7 @@ export default function App() {
         </h1>
         <div
           className="grid grid-cols-2 md:grid-cols-3 gap-2 text-white text-base p-2 md:p-10"
-          data-aos="fade-left"
+          data-aos="fade-right"
         >
           <CardsList newsArr={rows} />
         </div>
