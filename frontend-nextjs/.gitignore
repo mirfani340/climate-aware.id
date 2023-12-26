@@ -9,6 +9,8 @@
 # testing
 /coverage
 
+# https://newsapi.org/v2/everything?q=climatechange&apiKey=1a8bf8b62f9c4b81ac5712b3b87d937c
+
 # next.js
 /.next/
 /out/
@@ -27,6 +29,8 @@ yarn-error.log*
 
 # local env files
 .env*.local
+.env
+/.env
 
 # vercel
 .vercel
