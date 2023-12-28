@@ -446,12 +446,12 @@ export default function App() {
         </div>
       </section>
       <section id="section5" className="text-white">
-        <div className="grid md:grid-flow-col md:grid-cols-2 justify-center items-center h-150px bg-slate-950 pb-5">
-          <div className="flex flex-col p-4 md:ps-10">
+        <div className="grid md:grid-flow-col md:grid-cols-2 justify-center items-center h-150px pb-30px bg-black">
+          <div className="flex flex-col items-center p-4 md:ps-10">
             <h1 className="text-3xl font-bold">Get in touch with us</h1>
             <p className="text-base">Subscribe for more updated informations</p>
           </div>
-          <div className="join md:px-4">
+          <div className="join justify-center md:px-4">
             <div className="btn text-lg text-white bg-black rounded-l-full">
               <IoMailOutline />
             </div>

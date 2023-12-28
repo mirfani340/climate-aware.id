@@ -2,7 +2,6 @@ import React from "react";
 import Card from "./Card";
 
 const CardsList = ({ newsArr }) => {
-  console.log(newsArr);
   return (
     <>
       {newsArr.map((news, idx) => {
