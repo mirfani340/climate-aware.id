@@ -17,7 +17,7 @@ const Header = () => {
       <ul className="hidden md:flex font-semibold p-4 w-full justify-end gap-3 items-center basis-3/4">
         <a href="/">HOME</a>
         <a href="/about">ABOUT US</a>
-        <a href="/#section3">NEWS</a>
+        <a href="/news">NEWS</a>
         <a href="/#section4">EDUCATIONS</a>
         <a href="https://forum.muhammadirfani.dev">FORUM</a>
       </ul>
