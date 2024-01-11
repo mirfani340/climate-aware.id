@@ -9,6 +9,15 @@ This project, named "hackfest-gdsc-kopet-team", is focused on climate change edu
 
 # Quickstart (using docker)
 
+# Project Preview
+![ss stage 2](https://github.com/mirfani340/climate-aware.id/assets/73763532/609ead67-e5fa-4094-bf62-25abd0c26069)
+![climate-action id - forum muhammadirfani dev](https://github.com/mirfani340/climate-aware.id/assets/73763532/8bae432d-4e53-43ac-9e29-77b49bd2c465)
+![Home - localhost](https://github.com/mirfani340/climate-aware.id/assets/73763532/e66598e6-1832-4e6d-b07e-24a99fd881c8)
+![News - localhost](https://github.com/mirfani340/climate-aware.id/assets/73763532/4fb946ac-ebf5-40ea-9a0b-f34a8500b3e4)
+![About Us - localhost](https://github.com/mirfani340/climate-aware.id/assets/73763532/f630f9d1-b9d4-4f85-b71c-bfcc4310d486)
+
+
+
 To run the project using Docker Compose, follow these steps:
 
 1. Make sure you have Docker installed on your machine. If not, you can download and install it from the official Docker website.
