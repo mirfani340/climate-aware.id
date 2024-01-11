@@ -299,22 +299,40 @@ export default function App() {
           <div>
             <div className="flex flex-col justify-center md:p-8 md:pb-0 text-white">
               <p className="text-lg py-3 md:text-2xl font-semibold flex items-center">
-                OUR MISSION
+                OUR VISION
               </p>
               <p className="text-base md:text-lg">
-                Climate change is the greatest threat to humanity, perhaps ever.
-                Global temperatures are rising at an unprecedented rate, causing
-                drought and forest fires and impacting human health.
+                Become a leading online platform committed to fostering
+                awareness, understanding, and action on climate change, striving
+                for a sustainable and resilient future for the planet and its
+                inhabitants.
               </p>
             </div>
             <div className="flex flex-col justify-center md:p-8 md:pt-0 text-white">
               <p className="text-lg py-3 md:text-2xl font-semibold flex items-center">
-                OUR VISION
+                OUR MISSION
               </p>
-              <p className="text-base md:text-lg">
-                The environment is where we all meet; where we all have a mutual
-                interest it is the one thing all of us share.
-              </p>
+              <ul className="md:pt-2 px-8 flex flex-col gap-2">
+                <li className="list-disc">
+                  <p className="text-base md:text-lg">Raise Awareness</p>
+                </li>
+                <li className="list-disc">
+                  <p className="text-base md:text-lg">Inspire Action</p>
+                </li>
+                <li className="list-disc">
+                  <p className="text-base md:text-lg">Promote Innovation</p>
+                </li>
+                <li className="list-disc">
+                  <p className="text-base md:text-lg">
+                    Encourage Education and Research
+                  </p>
+                </li>
+                <li className="list-disc">
+                  <p className="text-base md:text-lg">
+                    Measure and Report Impact
+                  </p>
+                </li>
+              </ul>
             </div>
           </div>
           <Image src={img1} alt="about1" className="" />
@@ -330,45 +348,45 @@ export default function App() {
         >
           <CardsList newsArr={rows} />
         </div>
-          <nav className="flex justify-center">
-            <ul className="flex flex-wrap justify-center gap-1">
-              <li className="join-item btn border border-slate-300 bg-black text-white">
-                <a href="#" className="page-link " onClick={prevPage}>
-                  Prev
-                </a>
-              </li>
-              {numbers.map((number, idx) => {
-                return (
-                  <li
-                    className={`join-item btn border border-slate-300 bg-black text-white ${
-                      currentPage === number ? "active" : ""
-                    }`}
-                    key={idx}
+        <nav className="flex justify-center">
+          <ul className="flex flex-wrap justify-center gap-1">
+            <li className="join-item btn border border-slate-300 bg-black text-white">
+              <a href="#" className="page-link " onClick={prevPage}>
+                Prev
+              </a>
+            </li>
+            {numbers.map((number, idx) => {
+              return (
+                <li
+                  className={`join-item btn border border-slate-300 bg-black text-white ${
+                    currentPage === number ? "active" : ""
+                  }`}
+                  key={idx}
+                >
+                  <a
+                    href="#"
+                    className="page-link"
+                    onClick={() => changeCurPage(number)}
                   >
-                    <a
-                      href="#"
-                      className="page-link"
-                      onClick={() => changeCurPage(number)}
-                    >
-                      {number}
-                    </a>
-                  </li>
-                );
-              })}
-              <li className="join-item btn border border-slate-300 bg-black text-white">
-                <a href="#" className="page-link" onClick={nextPage}>
-                  Next
-                </a>
-              </li>
-            </ul>
-          </nav>
+                    {number}
+                  </a>
+                </li>
+              );
+            })}
+            <li className="join-item btn border border-slate-300 bg-black text-white">
+              <a href="#" className="page-link" onClick={nextPage}>
+                Next
+              </a>
+            </li>
+          </ul>
+        </nav>
       </section>
       <section id="section4" className="py-6">
         <h1
           className="text-white text-center font-semibold text-4xl md:text-5xl mb-12"
           data-aos="fade-up"
         >
-          Apa itu Climate Change?
+          What is Climate Change?
         </h1>
         <div className="grid grid-cols-1 md:grid-cols-2 text-xl">
           <div className="text-white relative" data-aos="zoom-in">

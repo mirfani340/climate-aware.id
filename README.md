@@ -1,6 +1,12 @@
 # Project Description
 This project, named "hackfest-gdsc-kopet-team", is focused on climate change education. It utilizes Next.js as the frontend framework, Laravel as the backend framework, and MySQL as the database. To facilitate quick setup, the project includes Docker Compose and a Dockerfile. These tools allow for easy containerization and deployment of the application.
 
+# Team members
+1. Muhammad Irfani as a Hustler
+2. Fajar Nasrullah as a Hipster
+3. Maulana Dimyati as a Hacker
+4. Singgih Budi Hartono as a Hacker
+
 # Quickstart (using docker)
 
 To run the project using Docker Compose, follow these steps:
@@ -87,3 +93,4 @@ yarn run dev
 ```bash
 npm run dev
 ```
+
