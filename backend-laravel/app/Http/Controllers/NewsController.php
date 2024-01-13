@@ -20,11 +20,12 @@ class NewsController extends Controller
                 'apiKey' => $apiKey,
                 'q' => 'climate change',
                 'sortBy' => 'publishedAt',
-            ]);
 
+            ]);
             $newsData = $response->json()['articles'];
 
             foreach ($newsData as $article) {
+
                 // Parse datetime string using Carbon
                 $publishedAt = Carbon::parse($article['publishedAt']);
 
