@@ -32,3 +32,4 @@ Route::middleware('auth:sanctum')->group(function () {
 });
 
 Route::get('/save-climate-news', [NewsController::class, 'saveClimateChangeNewsToDatabase']);
+Route::get('/climate-news', [NewsController::class, 'getClimateChangeNews']);

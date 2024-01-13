@@ -6,6 +6,7 @@ use App\Models\News;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Http;
 use Carbon\Carbon;
+use App\Http\Resources\NewsResource;
 
 class NewsController extends Controller
 {
@@ -44,6 +45,19 @@ class NewsController extends Controller
                 }
             }
             return response()->json(['status' => 'success', 'message' => 'Climate change news saved to database.'], 200);
+        } catch (\Exception $e) {
+            // Handle errors if any
+            return response()->json(['status' => 'error', 'message' => $e->getMessage()], 500);
+        }
+    }
+    public function getClimateChangeNews()
+    {
+        try {
+            $news = News::orderBy('published_at', 'desc')->get();
+            return response()->json([
+                'status' => 'success',
+                'data' => NewsResource::collection($news),
+            ], 200);
         } catch (\Exception $e) {
             // Handle errors if any
             return response()->json(['status' => 'error', 'message' => $e->getMessage()], 500);
