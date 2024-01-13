@@ -1,2 +1,4 @@
 *.zip
 frontend-nextjs/yarn.lock
+dev_tools
+.lando.yml
