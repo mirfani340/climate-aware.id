@@ -1,2 +1,6 @@
 *.zip
 frontend-nextjs/yarn.lock
+frontend-nextjs/pnpm-lock.yaml
+dev_tools
+.lando.yml
+frontend-nextjs/.env
