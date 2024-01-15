@@ -1,6 +1,7 @@
 "use client";
 import React from "react";
 import { ImCross } from "react-icons/im";
+import { IoMenuOutline } from "react-icons/io5";
 
 const Header = () => {
   const openOverlay = () => {
@@ -22,21 +23,9 @@ const Header = () => {
         <a href="https://forum.muhammadirfani.dev">FORUM</a>
       </ul>
 
-      <div className="flex bg-slate-500 rounded-md md:hidden items-center p-4">
+      <div className="flex rounded-md md:hidden items-center px-3">
         <button className="" onClick={openOverlay}>
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            fill="none"
-            viewBox="0 0 24 24"
-            className="inline-block w-5 h-5 stroke-current"
-          >
-            <path
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              strokeWidth="2"
-              d="M4 6h16M4 12h16M4 18h16"
-            ></path>
-          </svg>
+          <IoMenuOutline className="text-3xl" />
         </button>
       </div>
       <div
@@ -51,9 +40,9 @@ const Header = () => {
           </div>
           <a href="/" className="py-2">HOME</a>
           <div className="w-full h-2px bg-white"></div>
-          <a href="#section2" className="py-2" onClick={closeOverlay}>ABOUT US</a>
+          <a href="/about" className="py-2" onClick={closeOverlay}>ABOUT US</a>
           <div className="w-full h-2px bg-white"></div>
-          <a href="#section3" className="py-2" onClick={closeOverlay}>NEWS</a>
+          <a href="/news" className="py-2" onClick={closeOverlay}>NEWS</a>
           <div className="w-full h-2px bg-white"></div>
           <a href="#section4" className="py-2" onClick={closeOverlay}>EDUCATIONS</a>
           <div className="w-full h-2px bg-white"></div>
