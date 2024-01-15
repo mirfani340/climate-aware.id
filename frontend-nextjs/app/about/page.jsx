@@ -2,7 +2,7 @@ import React from "react";
 import MainLayout from "@/layouts/MainLayout";
 
 import Image from "next/image";
-import solutions from "../../public/images/solutions.jpg";
+import solutions from "../../public/images/solutions.webp";
 import vision from "../../public/images/vision.webp";
 import missions from "../../public/images/climate-change.webp";
 
