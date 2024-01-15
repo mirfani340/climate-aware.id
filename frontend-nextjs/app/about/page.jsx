@@ -3,8 +3,8 @@ import MainLayout from "@/layouts/MainLayout";
 
 import Image from "next/image";
 import solutions from "../../public/images/solutions.jpg";
-import vision from "../../public/images/vision.png";
-import missions from "../../public/images/climate-change.png";
+import vision from "../../public/images/vision.webp";
+import missions from "../../public/images/climate-change.webp";
 
 import { FaInstagram } from "react-icons/fa";
 import { FaLinkedin } from "react-icons/fa";
@@ -34,12 +34,17 @@ const page = () => {
         <div className="p-6 flex flex-col justify-center items-center">
           <h2 className="font-bold text-2xl">WHO WE ARE</h2>
           <p className="p-6 pt-3 text-center md:max-w-screen-md">
+          We are students from Telkom Institute of Technology Purwokerto who have a concern for the current climate change. 
+          The purpose of forming this team is to campaign for the prevention and handling of climate change, 
+          as well as to educate others to cultivate the same sense of concern
+          </p>
+          {/* <p className="p-6 pt-3 text-center md:max-w-screen-md">
             Kami adalah Mahasiswa Institut Teknologi Telkom Purwokerto yang
             memiliki rasa kepedulian terhadap perubahan iklim yang sedang
             terjadi saat ini. Tujuan dibuatnya tim ini untuk mengkampanyekan
             gerakan pencegahan dan penanganan perubahan iklim serta mengedukasi
             orang lain agar menumbuhkan rasa kepedulian yang sama
-          </p>
+          </p> */}
         </div>
       </section>
       <section id="section-3" className="bg-white">
