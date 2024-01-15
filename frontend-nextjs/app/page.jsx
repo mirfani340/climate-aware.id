@@ -4,16 +4,16 @@ import { useEffect, useState } from "react";
 import MainLayout from "@/layouts/MainLayout";
 import Image from "next/image";
 import CardsList from "@/components/CardsList";
+import ReactPaginate from "react-paginate";
 
 import axios from "axios";
 
-import img1 from "../public/images/img1.jpg";
-import evidence from "../public/images/evidence.jpg";
-import causes from "../public/images/causes.jpg";
+import img1 from "../public/images/img1.webp";
+import articIce from "../public/images/artic-ice.webp";
+import evidence from "../public/images/evidence.webp";
+import causes from "../public/images/causes.webp";
 import effects from "../public/images/effects.webp";
-import solutions from "../public/images/solutions.jpg";
-
-import { IoMailOutline } from "react-icons/io5";
+import solutions from "../public/images/solutions.webp";
 
 import AOS from "aos";
 import "aos/dist/aos.css";
@@ -30,28 +30,6 @@ export default function App() {
   const API_KEY = process.env.NEXT_PUBLIC_API_KEY || "";
   const API_URL = process.env.NEXT_PUBLIC_BASE_URL || "";
   const NEWS_API = `${API_URL}${API_KEY}`;
-
-  const [currentPage, setCurrentPage] = useState(1);
-  const rowsPerPage = 3;
-  const lastIndex = currentPage * rowsPerPage;
-  const firstIndex = lastIndex - rowsPerPage;
-  const rows = news.slice(firstIndex, lastIndex);
-  const npage = Math.ceil(news.length / rowsPerPage);
-  const numbers = [...Array(npage + 1).keys()].slice(1);
-
-  const prevPage = () => {
-    if (currentPage !== firstIndex) {
-      setCurrentPage(currentPage - 1);
-    }
-  };
-  const nextPage = () => {
-    if (currentPage !== lastIndex) {
-      setCurrentPage(currentPage + 1);
-    }
-  };
-  const changeCurPage = (number) => {
-    setCurrentPage(number);
-  };
 
   // init library AOS
   useEffect(() => {
@@ -71,6 +49,43 @@ export default function App() {
   useEffect(() => {
     getNews();
   }, []);
+
+  const PaginatedItem = ({ itemsPerPage }) => {
+    const [itemOffset, setItemOffset] = useState(0);
+    const endOffset = itemOffset + itemsPerPage;
+    console.log(`Loading items from ${itemOffset} to ${endOffset}`);
+    const currentItems = news.slice(itemOffset, endOffset);
+    const pageCount = Math.ceil(news.length / itemsPerPage);
+    const handlePageClick = (event) => {
+      const newOffset = (event.selected * itemsPerPage) % news.length;
+      console.log(
+        `User requested page number ${event.selected}, which is offset ${newOffset}`
+      );
+      setItemOffset(newOffset);
+    };
+
+    return (
+      <>
+        <div className="grid grid-cols-2 md:grid-cols-3 gap-2 text-white text-base p-2 md:p-10" data-aos="fade-right">
+          <CardsList newsArr={currentItems} />
+        </div>
+        <ReactPaginate
+          breakLabel="..."
+          nextLabel=">"
+          onPageChange={handlePageClick}
+          pageRangeDisplayed={5}
+          pageCount={pageCount}
+          previousLabel="<"
+          renderOnZeroPageCount={null}
+          className="flex flex-wrap gap-2 justify-center text-white md:max-w-screen-sm lg:max-w-screen-md"
+          pageClassName="flex-1 md:p-2 rounded-md page-number"
+          previousClassName="flex-1 md:p-2 page-number"
+          nextClassName="flex-1 md:p-2 page-number"
+          activeClassName="border-2 border-white"
+        />
+      </>
+    );
+  };
 
   if (news.length <= 0) {
     return (
@@ -97,7 +112,7 @@ export default function App() {
           >
             About Us
           </h1>
-          <div className="grid p-6 gap-5 md:grid-cols-2" data-aos="fade-up">
+          <div className="grid p-6 gap-5 md:grid-cols-2 items-center" data-aos="fade-up">
             <div>
               <div className="flex flex-col justify-center md:p-8 md:pb-0 text-white">
                 <p className="text-lg py-3 md:text-2xl font-semibold flex items-center">
@@ -119,7 +134,7 @@ export default function App() {
                 </p>
               </div>
             </div>
-            <Image src={img1} alt="about1" className="" />
+            <Image src={articIce} alt="about-us" className="max-h-300px sm:max-h-400px object-cover md:p-4" />
           </div>
         </section>
         <section id="section3" className="p-6">
@@ -245,19 +260,16 @@ export default function App() {
           </div>
         </section>
         <section id="section5" className="text-white">
-          <div className="grid md:grid-flow-col md:grid-cols-2 justify-center items-center h-150px bg-slate-950 pb-5">
-            <div className="flex flex-col p-4 md:ps-10">
+          <div className="grid md:grid-flow-col md:grid-cols-2 justify-center items-center md:h-150px pb-30px bg-black">
+            <div className="flex flex-col items-center p-4 md:ps-10">
               <h1 className="text-3xl font-bold">Get in touch with us</h1>
               <p className="text-base">
                 Subscribe for more updated informations
               </p>
             </div>
-            <div className="join md:px-4">
-              <div className="btn text-lg text-white bg-black rounded-l-full">
-                <IoMailOutline />
-              </div>
+            <div className="join md:px-4 w-40">
               <input
-                className="input input-bordered join-item text-black"
+                className="input input-bordered join-item text-black rounded-l-full"
                 placeholder="Email"
                 type="email"
               />
@@ -295,7 +307,7 @@ export default function App() {
         >
           About Us
         </h1>
-        <div className="grid p-6 gap-5 md:grid-cols-2" data-aos="fade-up">
+        <div className="grid p-6 gap-5 md:grid-cols-2 items-center" data-aos="fade-up">
           <div>
             <div className="flex flex-col justify-center md:p-8 md:pb-0 text-white">
               <p className="text-lg py-3 md:text-2xl font-semibold flex items-center">
@@ -335,51 +347,14 @@ export default function App() {
               </ul>
             </div>
           </div>
-          <Image src={img1} alt="about1" className="" />
+          <Image src={articIce} alt="about-us" className="max-h-300px sm:max-h-400px object-cover md:p-4" />
         </div>
       </section>
       <section id="section3" className="p-6">
         <h1 className="text-white font-semibold text-lg md:text-4xl">
           News and Features
         </h1>
-        <div
-          className="grid grid-cols-2 md:grid-cols-3 gap-2 text-white text-base p-2 md:p-10"
-          data-aos="fade-right"
-        >
-          <CardsList newsArr={rows} />
-        </div>
-        <nav className="flex justify-center">
-          <ul className="flex flex-wrap justify-center gap-1">
-            <li className="join-item btn border border-slate-300 bg-black text-white">
-              <a href="#" className="page-link " onClick={prevPage}>
-                Prev
-              </a>
-            </li>
-            {numbers.map((number, idx) => {
-              return (
-                <li
-                  className={`join-item btn border border-slate-300 bg-black text-white ${
-                    currentPage === number ? "active" : ""
-                  }`}
-                  key={idx}
-                >
-                  <a
-                    href="#"
-                    className="page-link"
-                    onClick={() => changeCurPage(number)}
-                  >
-                    {number}
-                  </a>
-                </li>
-              );
-            })}
-            <li className="join-item btn border border-slate-300 bg-black text-white">
-              <a href="#" className="page-link" onClick={nextPage}>
-                Next
-              </a>
-            </li>
-          </ul>
-        </nav>
+        <PaginatedItem itemsPerPage={3} />
       </section>
       <section id="section4" className="py-6">
         <h1
@@ -464,17 +439,14 @@ export default function App() {
         </div>
       </section>
       <section id="section5" className="text-white">
-        <div className="grid md:grid-flow-col md:grid-cols-2 justify-center items-center h-150px pb-30px bg-black">
+        <div className="grid md:grid-flow-col md:grid-cols-2 justify-center items-center md:h-150px pb-30px bg-black">
           <div className="flex flex-col items-center p-4 md:ps-10">
             <h1 className="text-3xl font-bold">Get in touch with us</h1>
             <p className="text-base">Subscribe for more updated informations</p>
           </div>
-          <div className="join justify-center md:px-4">
-            <div className="btn text-lg text-white bg-black rounded-l-full">
-              <IoMailOutline />
-            </div>
+          <div className="join md:px-4 w-40">
             <input
-              className="input input-bordered join-item text-black"
+              className="input input-bordered join-item text-black rounded-l-full"
               placeholder="Email"
               type="email"
             />
