@@ -1,5 +1,6 @@
 import React from "react";
 import MainLayout from "@/layouts/MainLayout";
+import { TfiMenuAlt } from "react-icons/tfi";
 
 import Image from "next/image";
 import evidence from "../../../public/images/evidence.webp";
@@ -41,7 +42,7 @@ const page = () => {
           </p> */}
         </div>
       </section>
-      <section className="p-6">
+      <section className="p-6 grid sm:grid-cols-3 md:grid-cols-4 gap-2">
         <div className="drawer hidden">
           <input id="my-drawer" type="checkbox" className="drawer-toggle" />
           <div className="drawer-content">
@@ -79,28 +80,36 @@ const page = () => {
             </ul>
           </div>
         </div>
-        <aside className="hidden">
-          Pada halaman ini
-          <ul>
+        <aside className="hidden sm:block table-of-contents sticky top-0 pt-100px bg-white max-w-fit md:p-4 pl-0 md:pl-4">
+          <div className="flex items-center gap-2 text-xl font-bold">
+            <TfiMenuAlt /> <h1>Contents</h1>
+          </div>
+          <ul className="p-2 flex flex-col gap-3">
             <li>
-              <a href="">History</a>
+              <a href="#section-1">1. Global Temperature Raises</a>
             </li>
             <li>
-              <a href="">Evidence</a>
+              <a href="#section-2">2. Reduction of Snow and Ice Cover</a>
             </li>
             <li>
-              <a href="">References</a>
+              <a href="#section-3">3. Sea Level Rise</a>
+            </li>
+            <li>
+              <a href="#section-4">4. Changes in Weather Pattern</a>
+            </li>
+            <li>
+              <a href="#section-5">5 Changes in Forests and Ecosystems</a>
             </li>
           </ul>
         </aside>
-        <div className="max-w-screen-sm m-auto text-lg">
+        <div className="col-span-2 max-w-screen-sm m-auto text-lg">
           <h1 className="my-2">
             Here is the evidence that climate change are occurring.
           </h1>
           {/* <h1 className="my-2">
             Berikut adalah beberapa bukti yang mendukung perubahan iklim:
           </h1> */}
-          <div>
+          <div id="section-1">
             <h2 className="font-bold mb-2">1. Global Temperature Rise</h2>
             <div className="px-4 py-2 text-center flex flex-col gap-2">
               <Image src={globalTemp} alt="global temp" />
@@ -158,7 +167,7 @@ const page = () => {
               risiko kepunahan.
             </p> */}
           </div>
-          <div>
+          <div id="section-2">
             <h2 className="font-bold my-2">
               2. Reduction of Snow and Ice Cover
             </h2>
@@ -192,7 +201,7 @@ const page = () => {
               mengalami pencairan yang cepat.
             </p> */}
           </div>
-          <div>
+          <div id="section-3">
             <h2 className="font-bold my-2">3. Sea Level Rise</h2>
             {/* <h2 className="font-bold my-2">3. Kenaikan Permukaan Air Laut</h2> */}
             <div className="px-4 py-2 flex flex-col items-center gap-2">
@@ -235,7 +244,7 @@ const page = () => {
               Studio Visualisasi Ilmiah NASA dan dirilis pada 16 Juni 2023.
             </p> */}
           </div>
-          <div>
+          <div id="section-4">
             <h2 className="font-bold my-2">4. Changes in Weather Patterns</h2>
             {/* <h2 className="font-bold my-2">4. Perubahan Pola Cuaca</h2> */}
             <div className="px-4 py-2 text-center flex flex-col items-center gap-2">
@@ -277,7 +286,7 @@ const page = () => {
               atmosfer.
             </p> */}
           </div>
-          <div>
+          <div id="section-5">
             <h2 className="font-bold my-2">
               5. Changes in Forests and Ecosystems
             </h2>
