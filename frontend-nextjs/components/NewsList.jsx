@@ -12,14 +12,12 @@ const NewsList = () => {
   const titleQuery = query.toLowerCase();
   const dotenv = require("dotenv");
   dotenv.config();
-  const API_KEY = process.env.NEXT_PUBLIC_API_KEY || "";
-  const API_URL = process.env.NEXT_PUBLIC_BASE_URL || "";
-  const NEWS_API = `${API_URL}${API_KEY}`;
+  const CLIMATE_AWARE_NEWS = process.env.NEXT_PUBLIC_BASE_URL || "";
 
   const getNews = async () => {
-    const response = await axios.get(`${NEWS_API}`);
-    const responseJson = await response.data.articles;
-    setNews(responseJson);
+    const response = await axios.get(`${CLIMATE_AWARE_NEWS}`);
+    const responseJson = await response.data;
+    setNews(responseJson.data);
   };
 
   useEffect(() => {
@@ -55,11 +53,11 @@ const NewsList = () => {
           return (
             <NewsCard
               key={idx}
-              urlImages={news.image}
+              urlImages={news.image_url}
               urlNews={news.url}
               title={news.title}
               description={news.description}
-              publishedAt={news.publishedAt}
+              publishedAt={news.published_at}
             />
           );
         })}
@@ -67,14 +65,15 @@ const NewsList = () => {
           breakLabel="..."
           nextLabel=">"
           onPageChange={handlePageClick}
-          pageRangeDisplayed={5}
+          pageRangeDisplayed={3}
           pageCount={pageCount}
           previousLabel="<"
           renderOnZeroPageCount={null}
           className="flex flex-wrap gap-2 justify-center font-bold md:max-w-screen-md m-auto"
-          pageClassName="flex-1 px-4 py-2 rounded-md page-number"
-          previousClassName="flex-1 px-4 py-2 page-number"
-          nextClassName="flex-1 px-4 py-2 page-number"
+          pageClassName="flex-1 rounded-md page-number"
+          breakClassName="flex-1 rounded-md page-number"
+          previousClassName="flex-1 page-number"
+          nextClassName="flex-1 page-number"
           activeClassName="text-black border-2 border-black"
         />
       </>

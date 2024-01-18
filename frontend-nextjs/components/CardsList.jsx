@@ -8,7 +8,7 @@ const CardsList = ({ newsArr }) => {
         return (
           <Card
             key={idx}
-            urlImages={news.image}
+            urlImages={news.image_url}
             urlNews={news.url}
             title={news.title}
           />
