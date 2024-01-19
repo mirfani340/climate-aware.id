@@ -7,7 +7,9 @@ WORKDIR /usr/src/app
 # Install app dependencies
 COPY package*.json ./
 
-RUN yarn install --quiet
+RUN npm i -g pnpm
+
+RUN pnpm i
 
 # Bundle app source
 COPY . .
@@ -15,5 +17,8 @@ COPY . .
 # Expose port 3000 to the outside world
 EXPOSE 3000
 
+# Build the application
+RUN pnpm run build
+
 # Start the application
-CMD ["yarn", "run", "dev"]
+CMD ["pnpm", "start"]
