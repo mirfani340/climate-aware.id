@@ -1,5 +1,6 @@
 import React from "react";
 import MainLayout from "@/layouts/MainLayout";
+import { TfiMenuAlt } from "react-icons/tfi";
 
 import Image from "next/image";
 
@@ -41,7 +42,7 @@ const page = () => {
           </p> */}
         </div>
       </section>
-      <section className="p-6">
+      <section className="p-6 grid sm:grid-cols-3 md:grid-cols-4">
         <div className="drawer hidden">
           <input id="my-drawer" type="checkbox" className="drawer-toggle" />
           <div className="drawer-content">
@@ -79,7 +80,23 @@ const page = () => {
             </ul>
           </div>
         </div>
-        <div className="max-w-screen-sm m-auto text-lg">
+        <aside className="hidden sm:block table-of-contents sticky top-0 pt-100px bg-white max-w-fit p-4 pl-0 md:pl-4">
+          <div className="flex items-center gap-2 text-xl font-bold">
+            <TfiMenuAlt /> <h1>Contents</h1>
+          </div>
+          <ul className="p-2 flex flex-col gap-3">
+            <li>
+              <a href="#section-1">1. Sea Level Rise</a>
+            </li>
+            <li>
+              <a href="#section-2">2. Changes in Weather Pattern</a>
+            </li>
+            <li>
+              <a href="#section-3">3. Ecosystem Disturbance and Biodiversity</a>
+            </li>
+          </ul>
+        </aside>
+        <div className="col-span-2 max-w-screen-sm m-auto text-lg">
           <p className="my-2">
             Climate change has various effects involving changes in global
             temperature and weather patterns worldwide. These effects can impact
@@ -94,7 +111,7 @@ const page = () => {
           {/* <p className="my-2">
             Berikut adalah beberapa efek dari perubahan iklim:
           </p> */}
-          <div>
+          <div id="section-1">
             <h2 className="font-bold mb-2">1. Sea Level Rise</h2>
             {/* <h2 className="font-bold mb-2">1. Kenaikan Permukaan Air Laut</h2> */}
             <div className="px-4 py-2 text-center flex flex-col gap-2">
@@ -138,7 +155,7 @@ const page = () => {
               Studio Visualisasi Ilmiah NASA dan dirilis pada 16 Juni 2023.
             </p> */}
           </div>
-          <div>
+          <div id="section-2">
             <h2 className="font-bold my-2">2. Changes in Weather Patterns</h2>
             {/* <h2 className="font-bold my-2">2. Perubahan Pola Cuaca</h2> */}
             <div className="px-4 py-2 text-center flex flex-col items-center gap-2">
@@ -180,7 +197,7 @@ const page = () => {
               atmosfer.
             </p> */}
           </div>
-          <div>
+          <div id="section-3">
             <h2 className="font-bold my-2">
               3. Ecosystem Disturbance and Biodiversity
             </h2>

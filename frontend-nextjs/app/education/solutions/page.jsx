@@ -1,5 +1,6 @@
 import React from "react";
 import MainLayout from "@/layouts/MainLayout";
+import { TfiMenuAlt } from "react-icons/tfi";
 
 import Image from "next/image";
 import solutions from "../../../public/images/solutions.webp";
@@ -45,7 +46,7 @@ const page = () => {
           </p> */}
         </div>
       </section>
-      <section className="p-6">
+      <section className="p-6 grid sm:grid-cols-3 md:grid-cols-4">
         <div className="drawer hidden">
           <input id="my-drawer" type="checkbox" className="drawer-toggle" />
           <div className="drawer-content">
@@ -83,7 +84,50 @@ const page = () => {
             </ul>
           </div>
         </div>
-        <div className="max-w-screen-sm m-auto text-lg">
+        <aside className="hidden sm:block table-of-contents sticky top-0 pt-100px bg-white max-w-fit p-4 pl-0 md:pl-4">
+          <div className="flex items-center gap-2 text-xl font-bold">
+            <TfiMenuAlt /> <h1>Contents</h1>
+          </div>
+          <ul className="p-2 flex flex-col gap-3">
+            <li>
+              <a href="#section-1">1. Shifting to Clean Energy</a>
+            </li>
+            <li>
+              <a href="#section-2">2. Reforestation and Forest Conservation</a>
+            </li>
+            <li>
+              <a href="#section-3">3. Sustainable Agriculture</a>
+            </li>
+            <li>
+              <a href="#section-4">4. Circular Economy</a>
+            </li>
+            <li>
+              <a href="#section-5">5. Carbon Capture and Storage (CCS)</a>
+            </li>
+            <li>
+              <a href="#section-6">6. Public Transportation and Active Transportation</a>
+            </li>
+            <li>
+              <a href="#section-7">7. Climate-friendly Urban Planning</a>
+            </li>
+            <li>
+              <a href="#section-8">8. Education and Advocacy</a>
+            </li>
+            <li>
+              <a href="#section-9">9. International Cooperation</a>
+            </li>
+            <li>
+              <a href="#section-10">10. Innovation and Research</a>
+            </li>
+            <li>
+              <a href="#section-11">11. Policy and Regulation</a>
+            </li>
+            <li>
+              <a href="#section-12">12. Individual Action</a>
+            </li>
+          </ul>
+        </aside>
+        <div className="col-span-2 max-w-screen-sm m-auto text-lg">
           <p className="my-2">
             Addressing climate change requires collective efforts from the
             entire society, governments, businesses, and organizations
@@ -101,7 +145,7 @@ const page = () => {
             Berikut adalah beberapa solusi dan tindakan yang dapat diambil untuk
             mengurangi dampak perubahan iklim:
           </p> */}
-          <div>
+          <div id="section-1">
             <h2 className="font-bold mb-2">1. Shifting to Clean Energy</h2>
             {/* <h2 className="font-bold mb-2">1. Pergeseran ke Energi Bersih</h2> */}
             <div className="px-4 py-2 text-center flex flex-col gap-2">
@@ -247,9 +291,9 @@ const page = () => {
               mempertimbangkan aspek-aspek berkelanjutan dan lingkungan.
             </p> */}
           </div>
-          <div>
+          <div id="section-2">
             <h2 className="font-bold my-2">
-              2. Reforestation and Forest Conservation:
+              2. Reforestation and Forest Conservation
             </h2>
             <div className="px-4 py-2 text-center flex flex-col items-center gap-2">
               <Image
@@ -351,8 +395,8 @@ const page = () => {
               </ul>
             </div>
           </div>
-          <div>
-            <h2 className="font-bold my-2">3. Sustainable Agriculture:</h2>
+          <div id="section-3">
+            <h2 className="font-bold my-2">3. Sustainable Agriculture</h2>
             <div className="px-4 py-2 text-center flex flex-col items-center gap-2">
               <Image
                 src={agriculture}
@@ -441,8 +485,8 @@ const page = () => {
               </ul>
             </div>
           </div>
-          <div>
-            <h2 className="font-bold my-2">4. Circular Economy:</h2>
+          <div id="section-4">
+            <h2 className="font-bold my-2">4. Circular Economy</h2>
             <div className="px-4 py-2 text-center flex flex-col items-center gap-2">
               <Image
                 src={circularEconomy}
@@ -525,9 +569,9 @@ const page = () => {
               </ul>
             </div>
           </div>
-          <div>
+          <div id="section-5">
             <h2 className="font-bold my-2">
-              5. Carbon Capture and Storage (CCS):
+              5. Carbon Capture and Storage (CCS)
             </h2>
             <div className="px-4 py-2 text-center flex flex-col items-center gap-2">
               <Image
@@ -604,9 +648,9 @@ const page = () => {
               </ul>
             </div>
           </div>
-          <div>
+          <div id="section-6">
             <h2 className="font-bold my-2">
-              6. Public Transportation and Active Transportation:
+              6. Public Transportation and Active Transportation
             </h2>
             <div className="grid grid-cols-2 gap-2 px-4 py-2 text-center">
               <Image src={publicTrans} alt="transjakarta" />
@@ -683,9 +727,9 @@ const page = () => {
               </ul>
             </div>
           </div>
-          <div>
+          <div id="section-7">
             <h2 className="font-bold my-2">
-              7. Climate-friendly Urban Planning:
+              7. Climate-friendly Urban Planning
             </h2>
             <div className="px-4 py-2 text-center flex flex-col items-center gap-2">
               <Image
@@ -747,8 +791,8 @@ const page = () => {
               </ul>
             </div>
           </div>
-          <div>
-            <h2 className="font-bold my-2">8. Education and Advocacy:</h2>
+          <div id="section-8">
+            <h2 className="font-bold my-2">8. Education and Advocacy</h2>
             <div className="px-4 py-2 text-center flex flex-col items-center gap-2">
               <Image
                 src={climateEducation}
@@ -835,8 +879,8 @@ const page = () => {
               </ul>
             </div>
           </div>
-          <div>
-            <h2 className="font-bold my-2">9. International Cooperation:</h2>
+          <div id="section-9">
+            <h2 className="font-bold my-2">9. International Cooperation</h2>
             <div className="px-4 py-2 text-center flex flex-col items-center gap-2">
               <Image
                 src={climateActionSummit}
@@ -856,15 +900,15 @@ const page = () => {
               adapting to climate impacts.
             </p>
           </div>
-          <div>
-            <h2 className="font-bold my-2">10. Innovation and Research:</h2>
+          <div id="section-10">
+            <h2 className="font-bold my-2">10. Innovation and Research</h2>
             <p className="pb-2">
               Invest in research and development to discover new technologies
               and strategies for mitigating and adapting to climate change.
             </p>
           </div>
-          <div>
-            <h2 className="font-bold my-2">11. Policy and Regulation:</h2>
+          <div id="section-11">
+            <h2 className="font-bold my-2">11. Policy and Regulation</h2>
             <p className="pb-2">
               Implement and enforce policies that incentivize sustainable
               practices and penalize environmentally harmful activities.
@@ -874,8 +918,8 @@ const page = () => {
               reflect scientific advancements.
             </p>
           </div>
-          <div>
-            <h2 className="font-bold my-2">12. Individual Action:</h2>
+          <div id="section-12">
+            <h2 className="font-bold my-2">12. Individual Action</h2>
             <p className="pb-2">
               Encourage individuals to adopt sustainable lifestyles, reduce
               energy consumption, and make environmentally conscious choices.

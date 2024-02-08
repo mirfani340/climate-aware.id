@@ -1,5 +1,6 @@
 import React from "react";
 import MainLayout from "@/layouts/MainLayout";
+import { TfiMenuAlt } from "react-icons/tfi";
 
 import Image from "next/image";
 import causes from "../../../public/images/causes.webp";
@@ -41,7 +42,7 @@ const page = () => {
           </p> */}
         </div>
       </section>
-      <section className="p-6">
+      <section className="p-6 grid sm:grid-cols-3 md:grid-cols-4">
         <div className="drawer hidden">
           <input id="my-drawer" type="checkbox" className="drawer-toggle" />
           <div className="drawer-content">
@@ -79,7 +80,29 @@ const page = () => {
             </ul>
           </div>
         </div>
-        <div className="max-w-screen-sm m-auto text-lg">
+        <aside className="hidden sm:block table-of-contents sticky top-0 pt-100px bg-white max-w-fit p-4 pl-0 md:pl-4">
+          <div className="flex items-center gap-2 text-xl font-bold">
+            <TfiMenuAlt /> <h1>Contents</h1>
+          </div>
+          <ul className="p-2 flex flex-col gap-3">
+            <li>
+              <a href="#section-1">1. Green House Gas Emissions</a>
+            </li>
+            <li>
+              <a href="#section-2">2. The Burning of Fossil Fuels</a>
+            </li>
+            <li>
+              <a href="#section-3">3. Ocean Warming and Ice Melting</a>
+            </li>
+            <li>
+              <a href="#section-4">4. Deforestation and Land-use Change</a>
+            </li>
+            <li>
+              <a href="#section-5">5. The Increase in Population and Economic Growth</a>
+            </li>
+          </ul>
+        </aside>
+        <div className="col-span-2 max-w-screen-sm m-auto text-lg">
           <p className="my-2">
             Climate change is caused by various factors, both natural and
             human-made. However, currently, much evidence indicates that the
@@ -95,7 +118,7 @@ const page = () => {
           {/* <p className="my-2">
             Berikut adalah beberapa penyebab utama perubahan iklim:
           </p> */}
-          <div>
+          <div id="section-1">
             <h2 className="font-bold mb-2">1. Greenhouse Gas Emissions</h2>
             {/* <h2 className="font-bold mb-2">1. Emisi Gas Rumah Kaca</h2> */}
             <div className="px-4 py-2 text-center flex flex-col items-center gap-2">
@@ -179,8 +202,8 @@ const page = () => {
               perubahan iklim global.
             </p> */}
           </div>
-          <div>
-            <h2 className="font-bold my-2">2. The burning of fossil fuels</h2>
+          <div id="section-2">
+            <h2 className="font-bold my-2">2. The Burning of Fossil Fuels</h2>
             {/* <h2 className="font-bold my-2">2. Pembakaran Bahan Bakar Fosil</h2> */}
             <div className="px-4 py-2 text-center flex flex-col items-center gap-2">
               <Image src={fosil} alt="fosil" className="px-4" />
@@ -227,7 +250,7 @@ const page = () => {
               energi nuklir yang aman.
             </p> */}
           </div>
-          <div>
+          <div id="section-3">
             <h2 className="font-bold my-2">3. Ocean Warming and Ice Melting</h2>
             {/* <h2 className="font-bold my-2">3. Pemanasan Laut dan Pelehan Es</h2> */}
             <div className="grid grid-cols-2 gap-2 px-4 py-2 text-center">
@@ -312,9 +335,9 @@ const page = () => {
               air laut di beberapa wilayah dan penurunan di tempat lain.
             </p> */}
           </div>
-          <div>
+          <div id="section-4">
             <h2 className="font-bold my-2">
-              4. Deforestation and Land-use change
+              4. Deforestation and Land-use Change
             </h2>
             {/* <h2 className="font-bold my-2">
               4. Deforestasi dan Perubahan Penggunaan Lahan
@@ -395,9 +418,9 @@ const page = () => {
               bumi.
             </p> */}
           </div>
-          <div>
+          <div id="section-5">
             <h2 className="font-bold my-2">
-              5. The increase in population and economic growth
+              5. The Increase In Population and Economic Growth
             </h2>
             {/* <h2 className="font-bold my-2">
               5. Pertambahan Populasi dan Pertumbuhan Ekonomi
