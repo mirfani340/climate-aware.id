@@ -20,7 +20,7 @@ const Header = () => {
         <a href="/about">ABOUT US</a>
         <a href="/news">NEWS</a>
         <a href="/#section4">EDUCATIONS</a>
-        <a href="https://forum.muhammadirfani.dev">FORUM</a>
+        <a href="https://forum.skuy.my.id/">FORUM</a>
       </ul>
 
       <div className="flex rounded-md md:hidden items-center px-3">
